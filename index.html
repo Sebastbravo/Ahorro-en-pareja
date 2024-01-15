@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruleta de Ahorro en Pareja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    #ruleta {
+      font-size: 24px;
+      padding: 10px;
+      margin: 20px;
+      border: 2px solid #333;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="ruleta" onclick="girarRuleta()">Presiona para girar la ruleta</div>
+<p id="resultado"></p>
+
+<script>
+  function girarRuleta() {
+    // Generar un número aleatorio del 0 al 366
+    const numero = Math.floor(Math.random() * 367);
+    
+    // Mostrar el resultado
+    document.getElementById('resultado').innerHTML = `Número seleccionado: ${numero}`;
+  }
+</script>
+
+</body>
+</html>
